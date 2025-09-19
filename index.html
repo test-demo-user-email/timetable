@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timetable</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link rel="stylesheet" href="/timetable/style-eb55f9b7fa2396ee.css" integrity="sha384-IYM0CjWxYS1dW19gAqZfeukPaN0yR5j5LLd1Yx4dWRWPFaKpsgUf7wPN588WHw8M"/>
+    <link rel="stylesheet" href="/timetable/style-d16399ff5f1207d8.css" integrity="sha384-ZzB1BWcRBhu45oN1EaRSfDRiiaeZDewfwIQqsI9n+j7f0c1ilCQ5Ic0HjjlNSEao"/>
 
-<link rel="modulepreload" href="/timetable/frontend-b447e2e9bf5342e9.js" crossorigin="anonymous" integrity="sha384-bzyR74XQYlfcOQAiX+7cHzq3kw/29T6gW4KxcFde324nG613D5T0cQWLbwy1ApCO"><link rel="preload" href="/timetable/frontend-b447e2e9bf5342e9_bg.wasm" crossorigin="anonymous" integrity="sha384-qdeY9wm+atZkRtuaskADik+p8MFPB7rmcrFEzf0n7yJPepVQEUUJjODagUc6AXi8" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/timetable/frontend-78c23b8f59c02659.js" crossorigin="anonymous" integrity="sha384-eoBLtFYrh7lOXtqn2vaaQIpiNoSr8iEDenVGm+MDOamSWD6aUQ0JC4kYckbnDJfG"><link rel="preload" href="/timetable/frontend-78c23b8f59c02659_bg.wasm" crossorigin="anonymous" integrity="sha384-sZ+rWHiLgEa/TuUKhJm9631+gJnR4jMD9b83WG5pP5yOvRlCVcopnnbtBadnKlJw" as="fetch" type="application/wasm"></head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
     <div id="app"></div>
 
 <script type="module">
-import init, * as bindings from '/timetable/frontend-b447e2e9bf5342e9.js';
-const wasm = await init({ module_or_path: '/timetable/frontend-b447e2e9bf5342e9_bg.wasm' });
+import init, * as bindings from '/timetable/frontend-78c23b8f59c02659.js';
+const wasm = await init({ module_or_path: '/timetable/frontend-78c23b8f59c02659_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -23,4 +24,3 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script></body>
 </html>
-
